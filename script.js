@@ -3,11 +3,14 @@ let firstName = document.querySelector("#firstName");
 let lastName = document.querySelector("#lastName");
 let password = document.querySelector("#password");
 let confirmedPass = document.querySelector("#confirmedpassw");
+let email = document.querySelector("#email");
 let errorClasses = ["error", "error-border"];
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   checkLength(firstName, 1, "Please enter first name");
   checkLength(lastName, 1, "Please enter  last name");
+  checkLength(firstName, 1, "Please enter first name");
+  checkLength(email, 1, "Please enter email ");
   if (checkLength(password, 6, "Password Too Short")) {
     checkEqual(password, confirmedPass);
   }
